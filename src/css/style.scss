@@ -1,0 +1,33 @@
+@mixin atMedium {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+.fs {
+  font-size: 0.9rem;
+  @include atMedium {
+    font-size: 1rem;
+  }
+}
+
+.lh7 {
+  line-height: 1.7rem;
+  @include atMedium {
+    line-height: 1.7rem;
+  }
+}
+
+.top_nav {
+  position: fixed;
+  width: 100%;
+}
+
+// global
+#nav {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}

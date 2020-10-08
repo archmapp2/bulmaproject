@@ -1,0 +1,8 @@
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13253.53447275539!2d130.75777591977538!3d33.854003150000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1591618726808!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+地図や場所を共有する
+パソコンで Google マップを開きます。
+共有するルート、地図、ストリートビュー画像に移動します。
+左上のメニュー アイコン をクリックします。
+[地図を共有または埋め込む] を選択します。 ...
+リンクをコピーして、マップを共有する場所に貼り付けます。
