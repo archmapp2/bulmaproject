@@ -1,0 +1,27 @@
+<!-- https://ja.javascript.info/selection-range -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="p1">Example: <i>italic</i> and <b>bold</b></p>
+
+    <script>
+      let range = new Range();
+
+      range.setStart(p1, 0);
+      range.setEnd(p1, 2);
+
+      // range の toString はそのコンテンツをテキストとして(タグなし)返します
+      alert(range); // Example: italic
+
+      // この range をドキュメント選択に適用します（後で説明します）
+      document.getSelection().addRange(range);
+    </script>
+  </body>
+</html>

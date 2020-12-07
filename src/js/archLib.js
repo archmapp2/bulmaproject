@@ -49,7 +49,7 @@ const $$oes = (o, f) => {
   o.addEventListener('submit', f);
 };
 
-const $$qoe = (ss, f) => {
+const $$qe = (ss, f) => {
   $$q(ss).addEventListener('click', f);
 };
 
@@ -128,13 +128,13 @@ const $$qoeSW = (
 
   switch (toggle) {
     case 'add':
-      $$qoe(btnId, () => trgt.classList.add(changeClass));
+      $$qe(btnId, () => trgt.classList.add(changeClass));
       break;
     case 'remove':
-      $$qoe(btnId, () => trgt.classList.remove(changeClass));
+      $$qe(btnId, () => trgt.classList.remove(changeClass));
       break;
     default:
-      $$qoe(btnId, () => trgt.classList.toggle(changeClass));
+      $$qe(btnId, () => trgt.classList.toggle(changeClass));
       break;
   }
 };

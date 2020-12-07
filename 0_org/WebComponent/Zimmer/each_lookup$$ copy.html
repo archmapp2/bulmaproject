@@ -1,0 +1,112 @@
+<!-- https://qiita.com/sassy_watson/items/f9947624876bf75a9eff -->
+
+<html>
+  <head>
+    <title>Hello Handlebars</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+
+    <script type="text/x-handlebars-template" id="template">
+          <div class="notification">
+            <h1 class="title ">
+              lookup
+            </h1>
+            <div class="subtitle">
+              \{{lookup ../color firstname}}
+            </div>
+          </div>
+
+          <table class="table is-striped">
+            <tr class="has-background-primary-light">
+              <th>名前</th>
+              <th>姓</th>
+            </tr>
+            {{#meibo}}
+              <tr>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+              </tr>
+            {{/meibo}}
+          </table>
+
+            <p class="panel-heading">
+              <span class="subtitle is-6">好きなカラー<span class="subtitle is-6"> (panel)</span>
+            </p>
+          <table class="table is-striped">
+            <tr class="has-background-primary-light">
+              <th>@index</th>
+              <th>@key</th>
+              <th>カラー</th>
+            </tr>
+            {{#each color}}
+              <tr>
+                <td>{{@index}}</td>
+                <td>{{@key}}</td>
+                <td>
+                {{this}}
+              </td>
+              </tr>
+            {{/each}}
+          </table>
+          <hr>
+
+          <div class="panel is-primary">
+            <p class="panel-heading">
+              <span class="title is-5">\{{lookup ../color firstname}} カラー<span class="subtitle is-6"> (panel)</span>
+            </p>
+
+          <table class="table is-striped">
+            <tr class="has-background-primary-light">
+                <th>名前</th>
+                <th>姓</th>
+                <th>カラー</th>
+              </tr>
+            {{#meibo}}
+              <tr>
+                  <td>{{firstname}}</td>
+                  <td>{{lastname}}</td>
+                  <td>{{lookup ../color firstname}}</td>
+                </tr>
+              {{/meibo}}
+           </table>
+      </div>
+    </script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div id="contents"></div>
+      </div>
+    </section>
+
+    <script>
+      var v = {
+        meibo: [
+          { firstname: 'Kanako', lastname: 'Momota' },
+          { firstname: 'Ayaka', lastname: 'Sasaki' },
+          { firstname: 'Shiori', lastname: 'Tamai' },
+          { firstname: 'Momoka', lastname: 'Ariyasu' },
+          { firstname: 'Reni', lastname: 'Takagi' },
+        ],
+        color: {
+          Kanako: 'red',
+          Ayaka: 'pink',
+          Shiori: 'yellow',
+          Momoka: 'green',
+          Reni: 'purple',
+        },
+      };
+
+      $$qtFnqT('#template', v, '#contents');
+    </script>
+  </body>
+</html>

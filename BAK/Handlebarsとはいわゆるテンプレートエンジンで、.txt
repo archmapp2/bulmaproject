@@ -1,0 +1,21 @@
+テンプレートエンジンHandlebarsで、HTMLの断片を使いまわすことが出来ます。
+Javascriptのオブジェクトを渡して動的に変更したり、独自のヘルパー関数を定義することも可能です。
+効率的なHTHLの生成を目指しましょう。
+また、Web Component も取り上げてみました。
+
+JavaScriptの値を参照してHTMLを生成できるもの。
+
+テンプレート・ひな形となるHTMLを用意
+そのHTMLをHandlebarsに食わせる
+動的にはめ込む値をつっこむ
+
+HTMLの断片を作る
+
+
+共通部分が多いHTMLを効率よく作る
+
+
+https://www.codegrid.net/
+購読解除
+
+https://app.codegrid.net/setting

@@ -1,0 +1,35 @@
+<!-- https://ja.javascript.info/selection-range -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    テキストノードの部分選択
+    テキストノード内の相対オフセットとして始点と終点を設定するだけです。
+    次のような範囲を作成します:
+
+    <p id="p">Example: <i>italic</i> and <b>bold</b></p>
+    <!-- 
+  <p> の最初の子の位置 2 から開始("Example: " の最初の2文字を除くすべて)
+  <b> の最初の子の位置 3 で終了(“bold” の最初の3文字):
+  <p id="p">Example: <i>italic</i> and <b>bold</b></p>
+ -->
+
+    <script>
+      let range = new Range();
+
+      range.setStart(p.firstChild, 2);
+      range.setEnd(p.querySelector('b').firstChild, 3);
+
+      alert(range); // ample: italic and bol
+
+      // 選択にこの範囲を使用します(後ほど説明します)
+      window.getSelection().addRange(range);
+    </script>
+  </body>
+</html>

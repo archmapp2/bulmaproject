@@ -1,0 +1,193 @@
+<!-- https://qiita.com/sassy_watson/items/f9947624876bf75a9eff -->
+<!-- each_lookup$$.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bulma Handlebars" />
+    <title>Bulma Project Handlebars</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+
+    <script type="text/x-handlebars-template" id="template">
+      <div class="notification is-info">
+        <h1 class="title ">
+          lookup
+        </h1>
+        <div class="subtitle">
+          \{{lookup ../color firstname}}
+        </div>
+      </div>
+
+        <p class="panel-heading">
+          <span class="subtitle is-6">名簿</span>
+        </p>
+      <table class="table is-striped">
+        <tr class="has-background-primary-light">
+          <th>名前</th>
+          <th>姓</th>
+        </tr>
+        {{#meibo}}
+          <tr>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+          </tr>
+        {{/meibo}}
+      </table>
+
+        <p class="panel-heading">
+          <span class="subtitle is-6">好きなカラー</span>
+        </p>
+      <table class="table is-striped">
+        <tr class="has-background-primary-light">
+          <th>@index</th>
+          <th>@key</th>
+          <th>カラー</th>
+        </tr>
+        {{#each color}}
+          <tr>
+            <td>{{@index}}</td>
+            <td>{{@key}}</td>
+            <td>
+            {{this}}
+          </td>
+          </tr>
+        {{/each}}
+      </table>
+      <hr>
+
+      <div class="panel is-primary">
+        <p class="panel-heading">
+          <span class="title is-5">\{{lookup ../color firstname}} カラー</span><span class="subtitle is-6"> (panel)</span>
+        </p>
+      </div>
+       <table class="table is-striped">
+        <tr class="has-background-primary-light">
+            <th>名前</th>
+            <th>姓</th>
+            <th>カラー</th>
+          </tr>
+        {{#meibo}}
+          <tr>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+            <td>{{lookup ../color firstname}}</td>
+          </tr>
+        {{/meibo}}
+       </table>
+    </script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns has-background-white-bis">
+          <div class="column"></div>
+          <div class="column is-10 mt-4">
+            <article class="message is-primary">
+              <div class="message-header subtitle">
+                <p>初めての [<strong>Handlebars</strong>]</p>
+              </div>
+            </article>
+
+            <main>
+              <section class="section">
+                <div class="container">
+                  <div id="contents"></div>
+                </div>
+              </section>
+            </main>
+
+            <div class="box">
+              <div class="box">
+                <h2 class="is-size-4 has-background-white-ter p-2 km">
+                  　解説
+                </h2>
+                <div class="content">
+                  <ul>
+                    <li>
+                      BulmaでJavascriptを利用するために、このWebサイトでは<br />
+                      　<a href="/src/sub/js/shortBulma.html"
+                        ><strong>shortBulma$$.js</strong> または
+                        <strong>shortBulma.js</strong></a
+                      ><br />
+                      というライブラリを使います。
+                    </li>
+                    <li class="pt-2">
+                      使い方の例：&lt;script
+                      src=&quot;/src/js/shortBulma$$.js&quot;&gt;&lt;/script&gt;<br />
+                      headタグ内に挿入。但し、pathは状況によって変わります。
+                    </li>
+                    <li class="pt-2">
+                      
+                      <p class="pt-3 px-3">
+                        例えば、notification$$.htmlとshortBulma$$.jsが同じフォルダにある時は<br />
+                        &lt;script
+                        src=&quot;./shortBulma$$.js&quot;&gt;&lt;/script&gt;
+                        または<br />
+                        &lt;script
+                        src=&quot;shortBulma$$.js&quot;&gt;&lt;/script&gt;
+                        となります。
+                      </p>
+                    </li>
+                    <li>
+                      同じく、handlebars用に<br />
+                      　<a href="/src/sub/js/shortHbs.html"
+                        ><strong class="has-text-warning-dark">shortHbs$$.js</strong></a
+                      ><br />
+                      というライブラリを使います。
+                    </li>
+                    <hr>
+                    <li class="pt-1">
+                      <dl>
+                        <dt>
+                          <strong
+                            >$$qtFnqT('#template', v, '#target_link');</strong
+                          >
+                        </dt>
+                        <dd class="py-2">
+                          テンプレート#templateをコンパイルし、コンテキストｖを適用して得られたHTMLコードを、要素#target_linkのinnserHTMLプロパティに代入する。
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var v = {
+        meibo: [
+          { firstname: 'Kanako', lastname: 'Momota' },
+          { firstname: 'Ayaka', lastname: 'Sasaki' },
+          { firstname: 'Shiori', lastname: 'Tamai' },
+          { firstname: 'Momoka', lastname: 'Ariyasu' },
+          { firstname: 'Reni', lastname: 'Takagi' },
+        ],
+        color: {
+          Kanako: 'red',
+          Ayaka: 'pink',
+          Shiori: 'yellow',
+          Momoka: 'green',
+          Reni: 'purple',
+        },
+      };
+
+      $$qtFnqT('#template', v, '#contents');
+    </script>
+  </body>
+</html>

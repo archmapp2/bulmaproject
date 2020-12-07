@@ -1,0 +1,431 @@
+<!-- https://johobase.com/bulma-install-cdn/ -->
+
+<!-- https://johobase.com/bulma-gridsystem-columns/ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bulma Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .columns > div.column {
+        border: solid 1px #ddd;
+        text-align: center;
+      }
+      .columns {
+        margin-top: 0;
+      }
+      .columns:not(:last-child) {
+        margin-bottom: 5px; /* 12px; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div>Bulmaのグリッドシステム</div>
+        <hr />
+        <div class="columns">
+          columnsクラスとcolumnクラスを使用したグリッドシステムで配置した要素は、ブラウザーの横幅が768px以下になると改行されて縦に並びます。
+        </div>
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" style="background: #fee">Column1</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #efb">Column2</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #eef">Column3</div>
+        </div>
+        <hr />
+
+        <div>Bulmaのグリッドシステム</div>
+        <hr />
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" style="background: #fee">1</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #ffa">2</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #efb">3</div>
+          <!-- 4列目 -->
+          <div class="column" style="background: #efe">4</div>
+          <!-- 5列目 -->
+          <div class="column" style="background: #eef">5</div>
+          <!-- 6列目 -->
+          <div class="column" style="background: #fee">6</div>
+          <!-- 7列目 -->
+          <div class="column" style="background: #ffa">7</div>
+          <!-- 8列目 -->
+          <div class="column" style="background: #efb">8</div>
+          <!-- 9列目 -->
+          <div class="column" style="background: #dff">9</div>
+          <!-- 10列目 -->
+          <div class="column" style="background: #eef">10</div>
+          <!-- 11列目 -->
+          <div class="column" style="background: #fee">11</div>
+          <!-- 12列目 -->
+          <div class="column" style="background: #ffa">12</div>
+          <!-- 13列目 -->
+          <div class="column" style="background: #efb">13</div>
+          <!-- 14列目 -->
+          <div class="column" style="background: #dff">14</div>
+          <!-- 15列目 -->
+          <div class="column" style="background: #eef">15</div>
+          <!-- 16列目 -->
+          <div class="column" style="background: #fee">16</div>
+          <!-- 17列目 -->
+          <div class="column" style="background: #ffa">17</div>
+          <!-- 18列目 -->
+          <div class="column" style="background: #efb">18</div>
+          <!-- 19列目 -->
+          <div class="column" style="background: #dff">19</div>
+          <!-- 20列目 -->
+          <div class="column" style="background: #eef">20</div>
+        </div>
+        <hr />
+
+        <div>Bulmaのグリッドシステム {classes}</div>
+        <hr />
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" class="is-primary" >
+            <span class="has-background-primary">0</span>
+          </div>
+          <div class="column" style="background: #fee">
+            <span >0</span>
+          </div>
+          <div class="column" class="ld">1</div>
+          <!-- 2列目 -->
+          <div class="column" class="lw">2</div>
+          <!-- 3列目 -->
+          <div class="column" class="ll">3</div>
+          <!-- 4列目 -->
+          <div class="column" class="ln">4</div>
+          <!-- 5列目 -->
+          <div class="column" class="ln">5</div>
+          <!-- 6列目 -->
+          <div class="column" class="ld">6</div>
+          <!-- 7列目 -->
+          <div class="column" class="lw">7</div>
+          <!-- 8列目 -->
+          <div class="column" class="ll">8</div>
+          <!-- 9列目 -->
+          <div class="column" class="ls">9</div>
+          <!-- 10列目 -->
+          <div class="column" class="ln">10</div>
+          <!-- 11列目 -->
+          <div class="column" class="ld">11</div>
+          <!-- 12列目 -->
+          <div class="column" class="lw">12</div>
+          <!-- 13列目 -->
+          <div class="column" class="ll">13</div>
+          <!-- 14列目 -->
+          <div class="column" class="ls">14</div>
+          <!-- 15列目 -->
+          <div class="column" class="ln">15</div>
+          <!-- 16列目 -->
+          <div class="column" class="ld">16</div>
+          <!-- 17列目 -->
+          <div class="column" class="lw">17</div>
+          <!-- 18列目 -->
+          <div class="column" class="ll">18</div>
+          <!-- 19列目 -->
+          <div class="column" class="ls">19</div>
+          <!-- 20列目 -->
+          <div class="column" class="ln">20</div>
+        </div>
+        <hr />
+
+        <div>縦3行、横3列に配置したグリッド</div>
+        <hr />
+
+        <!-- 1行目 -->
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" style="background: #fee">Column1-1</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #efb">Column1-2</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #eef">Column1-3</div>
+        </div>
+        <!-- 2行目 -->
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" style="background: #efb">Column2-1</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #eef">Column2-2</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #fee">Column2-3</div>
+        </div>
+        <!-- 3行目 -->
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column" style="background: #eef">Column3-1</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #fee">Column3-2</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #efb">Column3-3</div>
+        </div>
+        <hr />
+
+        <!-- https://johobase.com/bulma-gridsystem-columns-specify-size/ -->
+        <div class="columns">
+          グリッドの列は「半分」「全部」「3分の2」などの割合で指定することができます。
+        </div>
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column is-half" style="background: #67cebf">is-half</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #f1f1f1">auto</div>
+        </div>
+
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column is-half" style="background: #67cebf">is-half</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #f1f1f1">auto</div>
+        </div>
+
+        <hr />
+        <div class="columns">
+          グリッドの列は「半分」「全部」「3分の2」などの割合で指定することができます。
+        </div>
+
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column is-half" style="background: #67cebf">is-half</div>
+          <!-- 2列目 -->
+          <div class="column" style="background: #f1f1f1">auto</div>
+          <!-- 3列目 -->
+          <div class="column" style="background: #f1f1f1">auto</div>
+        </div>
+
+        <div class="columns">
+          <!-- 1列目 -->
+          <div class="column is-half" style="background: #67cebf">is-half</div>
+        </div>
+        <hr />
+        <!-- 
+          割合で指定できるサイズのクラスには以下のものがあります。
+
+          クラス名	サイズ（幅）
+          is-full	全部・1分の1（1/1）
+          is-half	半分・2分の1（1/2）
+          is-one-third	3分の1（1/3）
+          is-two-thirds	3分の2（2/3）
+          is-one-quarter	4分の1（1/4）
+          is-three-quarters	4分の3（3/4）
+          is-one-fifth	5分の1（1/5）
+          is-two-fifths	5分の2（2/5）
+          is-three-fifths	5分の3（3/5）
+          is-four-fifths	5分の4（4/5）
+         -->
+        <hr />
+
+        <div>is-full（全部・1分の1）</div>
+        <div class="columns">
+          <!-- is-full -->
+          <div class="column is-full" style="background: #67cebf">1/1</div>
+        </div>
+        <div>is-half（半分・2分の1）</div>
+        <div class="columns">
+          <!-- is-half -->
+          <div class="column is-half" style="background: #67cebf">1/2</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-one-third（3分の1）</div>
+        <div class="columns">
+          <!-- is-one-third -->
+          <div class="column is-one-third" style="background: #67cebf">1/3</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-two-thirds（3分の2）</div>
+        <div class="columns">
+          <!-- is-two-thirds -->
+          <div class="column is-two-thirds" style="background: #67cebf">
+            2/3
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-one-quarter（4分の1）</div>
+        <div class="columns">
+          <!-- is-one-quarter -->
+          <div class="column is-one-quarter" style="background: #67cebf">
+            1/4
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-three-quarters（4分の3）</div>
+        <div class="columns">
+          <!-- is-three-quarters -->
+          <div class="column is-three-quarters" style="background: #67cebf">
+            3/4
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+
+        <div>is-one-fifth（5分の1）</div>
+        <div class="columns">
+          <!-- is-one-fifth -->
+          <div class="column is-one-fifth" style="background: #67cebf">1/5</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-two-fifths（5分の2）</div>
+        <div class="columns">
+          <!-- is-two-fifths -->
+          <div class="column is-two-fifths" style="background: #67cebf">
+            2/5
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-three-fifths（5分の3）</div>
+        <div class="columns">
+          <!-- is-three-fifths -->
+          <div class="column is-three-fifths" style="background: #67cebf">
+            3/5
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-four-fifths（5分の4）</div>
+        <div class="columns">
+          <!-- is-four-fifths -->
+          <div class="column is-four-fifths" style="background: #67cebf">
+            4/5
+          </div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <hr />
+
+        <div>
+          Bulmaには列のサイズを指定するために「12カラムシステム（12 columns
+          system）」が用意されています。
+        </div>
+        <div>is-1（12分の1）</div>
+        <div class="columns">
+          <!-- is-1 -->
+          <div class="column is-1" style="background: #67cebf">1/12</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+
+        <div>is-2（6分の1）</div>
+        <div class="columns">
+          <!-- is-2 -->
+          <div class="column is-2" style="background: #67cebf">1/6</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-3（4分の1）</div>
+        <div class="columns">
+          <!-- is-3 -->
+          <div class="column is-3" style="background: #67cebf">1/4</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-4（3分の1）</div>
+        <div class="columns">
+          <!-- is-4 -->
+          <div class="column is-4" style="background: #67cebf">1/3</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-5（12分の5）</div>
+        <div class="columns">
+          <!-- is-5 -->
+          <div class="column is-5" style="background: #67cebf">5/12</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-6（半分・2分の1）</div>
+        <div class="columns">
+          <!-- is-6 -->
+          <div class="column is-6" style="background: #67cebf">1/2</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-7（12分の7）</div>
+        <div class="columns">
+          <!-- is-7 -->
+          <div class="column is-7" style="background: #67cebf">7/12</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-8（3分の2）</div>
+        <div class="columns">
+          <!-- is-8 -->
+          <div class="column is-8" style="background: #67cebf">2/3</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-9（4分の3）</div>
+        <div class="columns">
+          <!-- is-9 -->
+          <div class="column is-9" style="background: #67cebf">3/4</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-10（6分の5）</div>
+        <div class="columns">
+          <!-- is-10 -->
+          <div class="column is-10" style="background: #67cebf">5/6</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-11（12分の11）</div>
+        <div class="columns">
+          <!-- is-11 -->
+          <div class="column is-11" style="background: #67cebf">11/12</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+          <div class="column" style="background: #f1f1f1">自動</div>
+        </div>
+        <div>is-12（全部・1分の1）</div>
+        <div class="columns">
+          <!-- is-12 -->
+          <div class="column is-12" style="background: #67cebf">1/1</div>
+        </div>
+        <hr />
+
+        <div>
+          is-halfやis-three-fifthsなどの割合の指定や、is-12やis-3などの12分割した列数での指定は、余白（スペース）を指定するオフセットとしても使用できます。
+        </div>
+        <div>
+          余白を指定する際は「”is-offset-” +
+          [割合または列数]」の形式でクラスを指定します。
+        </div>
+        <b>class="column is-half is-offset-one-quarter"</b>
+        <div class="columns">
+          <div
+            class="column is-half is-offset-one-quarter"
+            style="background: #67cebf"
+          >
+            1/4の左余白を指定
+          </div>
+        </div>
+
+        <b>class="column is-10 is-offset-1"</b>
+        <div class="columns">
+          <div class="column is-10 is-offset-1" style="background: #67cebf">
+            1/12の左余白を指定
+          </div>
+        </div>
+        <hr />
+        <hr />
+      </div>
+    </section>
+  </body>
+</html>

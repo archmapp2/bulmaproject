@@ -1,0 +1,303 @@
+<!-- Mario$$.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bulma Handlebars" />
+    <title>Bulma Project [Web Components]</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="/src/js/shortBulma$$.js"></script>
+    <script src="/src/js/shortHbs$$.js"></script>
+  <!-- 
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+   -->
+
+    <style>
+      body {
+        --theme-colour: var(--blue);
+        --background: #333;
+        background: var(--picker-colour);
+        --picker-colour: #777;
+        --blue: #29abe2;
+        display: flex;
+        height: 100%;
+        /* height: 100vh; */
+        font-family: sans-serif;
+        background-color: var(--background);
+        color: white;
+      }
+
+      twoot-post {
+        margin: auto;
+      }
+    </style>
+
+    <template id="twoot-post">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+      />
+
+      <style>
+        :host {
+          font-size: 24px;
+          font-family: inherit;
+        }
+
+        .reactions {
+          border-top: 2px solid var(--theme-colour);
+          border-bottom: 2px solid var(--theme-colour);
+          min-height: 50px;
+          padding: 0 0.5em;
+        }
+      </style>
+
+      <div class="columns is-mobile is-primary">
+        <div class="column is-2">
+          <div class="avatar"><img /></div>
+        </div>
+        <div class="column is-8">
+          <div class="content"><slot></slot></div>
+        </div>
+        <div class="column is-2 reaction">
+          <div class="reaction">
+            <reaction-picker></reaction-picker>
+          </div>
+        </div>
+      </div>
+      <div class="reactions pt-2"></div>
+    </template>
+
+    <template id="emoji-picker">
+      <style>
+        :host {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          position: relative;
+        }
+        button {
+          border: none;
+          background: none;
+          color: var(--theme-colour);
+          font-size: 2em;
+          cursor: pointer;
+        }
+        button:active,
+        button:focus {
+          outline: inherit;
+        }
+        ul {
+          position: absolute;
+          border: 2px solid var(--theme-colour);
+          list-style: none;
+          padding: 0.4em;
+          left: -20%;
+          top: -103%;
+          background: var(--background);
+        }
+        ul.hidden {
+          display: none;
+        }
+        li button:hover,
+        li button:focus {
+          background: var(--picker-colour);
+        }
+      </style>
+
+      <button class="selected">+</button>
+      <ul class="hidden">
+        <li><button>😃</button></li>
+        <li><button>😞</button></li>
+        <li>
+          <button><small>&nbsp;</small>🚡</button>
+        </li>
+      </ul>
+    </template>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column is-10 mt-4">
+            <article class="message is-primary">
+              <div class="message-header subtitle">
+                <p>初めての [<strong>Web Components</strong>]</p>
+              </div>
+              <span class="message-body has-text-centered is-size-5">
+                <span class="is-size-5">2つのテンプレート</span>
+              </span>
+            </article>
+
+            <main>
+              <div class="columns is-centered mt-6">
+                <div class="column is-10">
+                  <twoot-post avatar="/src/assets/img/bowser-avatar.png">
+                    Hey Mario,<br />
+                    the princess is in
+                    <a href="https://goo.gl/maps/cZzyjm8LMrF2"
+                      >another castle</a
+                    >
+                  </twoot-post>
+                </div>
+              </div>
+              <div class="columns is-centered mt-6">
+                <div class="column is-10">
+                  <twoot-post avatar="/src/assets/img/Racoon_Mario_24649.png">
+                    ../../Racoon_Mario_24649.png,<br />
+                    the princess is in another castle? Ok!
+                    <a href="https://goo.gl/maps/cZzyjm8LMrF2"
+                      >another castle</a
+                    >
+                  </twoot-post>
+                </div>
+              </div>
+              <div class="columns is-centered mt-6">
+                <div class="column is-10">
+                  <twoot-post avatar="/src/assets/img/Goomba_24659.png">
+                    Goomba_24659.png<br />
+                    Hum Hum Hum ...
+                    <a href="https://goo.gl/maps/cZzyjm8LMrF2"
+                      >another castle</a
+                    >
+                  </twoot-post>
+                </div>
+              </div>
+            </main>
+
+            <div class="box mt-6">
+              <div class="box">
+                <h2 class="is-size-4 has-background-white-ter p-2 km">
+                  　解説
+                </h2>
+                <div class="content">
+                  <ul>
+                    <li class="pt-1">
+                      <dl>
+                        <dt>
+                          <strong
+                            >$$oa_t(this.shadowRoot, 'twoot-post');</strong
+                          >
+                        </dt>
+                        <dd class="py-2">
+                          テンプレート#templateをコンパイルし、コンテキストｖを適用して得られたHTMLコードを、要素#contentsのinnserHTMLプロパティに代入する。
+                        </dd>
+                        <dt>
+                          <strong>$$oq(this.shadowRoot, 'img')</strong>
+                        </dt>
+                        <dd class="py-2">
+                          オブジェクトthis.shadowRootから'img'要素を求める。
+                        </dd>
+                        <dt>
+                          <strong>$$oe = (o, f, evNa = 'click') </strong>
+                        </dt>
+                        <dd class="py-2">
+                          オブジェクトthis.shadowRootに、clickイベントリスナーf
+                          を登録する。
+                        </dd>
+                        <dt>
+                          <strong
+                            >$$ocL(this.options, 'hidden', 'remove');</strong
+                          >
+                        </dt>
+                        <dd class="py-2">
+                          オブジェクトから'hidden'クラスを取り除く。
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      customElements.define(
+        'twoot-post',
+        class extends HTMLElement {
+          constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+
+            $$oa_t(this.shadowRoot, 'twoot-post');
+
+            $$oq(this.shadowRoot, 'img').src = this.getAttribute('avatar');
+
+            this.reactionsElement = $$oq(this.shadowRoot, '.reactions');
+            this.reactions = [];
+
+            $$oe(
+              this.shadowRoot,
+              (event) => {
+                this.reactions.push(event.detail);
+                this.reactionsElement.textContent = this.reactions.join('');
+              },
+              'reaction-selected'
+            );
+          }
+        }
+      );
+
+      customElements.define(
+        'reaction-picker',
+        class extends HTMLElement {
+          constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+
+            $$oa_t(this.shadowRoot, 'emoji-picker');
+
+            this.selected = $$oq(this.shadowRoot, 'button.selected');
+            this.options = $$oq(this.shadowRoot, 'ul');
+
+            $$oe(this.selected, () => {
+              $$ocL(this.options, 'hidden', 'remove');
+            });
+
+            $$oe(this.options, (event) => {
+              this.value = event.target.textContent;
+              $$ocL(this.options, 'hidden', 'add');
+            });
+          }
+
+          toggleList() {
+            $$ocL(this.options, 'hidden');
+          }
+
+          set value(emoji) {
+            this._value = emoji;
+            this.selected.textContent = emoji;
+            this.dispatchEvent(
+              new CustomEvent('reaction-selected', {
+                detail: emoji,
+                bubbles: true,
+              })
+            );
+          }
+          get value() {
+            return this._value;
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

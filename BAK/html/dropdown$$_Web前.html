@@ -1,0 +1,288 @@
+<!-- dropdown$$.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bulma Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+    ></script>
+
+    <script src="/src/js/shortBulma$$.js"></script>
+    <!-- <script src="./js/shortBulma$$.js"></script> -->
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="notification has-background-primary-light is-bold mb-1">
+          <div class="container">
+            <h1 class="title">Dropdownでの選択</h1>
+            <h2 class="subtitle is-5">
+              クリックしてメニュー表示 と ホバリングによる表示
+            </h2>
+          </div>
+        </div>
+
+        <div class="columns mt-5">
+          <div class="column"></div>
+          <!-- 各ページ -->
+          <article class="message is-primary">
+            <div
+              class="sel1 notification has-background-warning mb-3 py-2 px-5"
+            >
+              下のドロップダウンをクリックして選択
+            </div>
+            <div class="dropdown dd1">
+              <!-- <div class="dropdown is-hoverable">  -->
+              <!-- <div class="dropdown is-active">  -->
+
+              <div class="dropdown-trigger ml-3 mb-3">
+                <button
+                  class="button is-primary"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu"
+                >
+                  <span>Todos</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-menu dd1m" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item" data-item="1">
+                    1.Design a custom database to store
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="2">
+                    2.Take pictures of beautiful flowers
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="3">
+                    3.Ride to a horse and write experience
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="4">
+                    4.Go for a trip with bike
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="5">
+                    5.Design a custom database to store
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="6">
+                    6.Buy a sumsung headset
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="7">
+                    7.Listen music for one hour
+                  </a>
+
+                  <a href="#" class="dropdown-item" data-item="8">
+                    8.Go for a morning walk
+                  </a>
+                </div>
+              </div>
+            </div>
+            　
+          </article>
+          <hr />
+
+          <article class="message is-primary">
+            <div class="sel1 notification has-background-primary-light mb-1">
+              右下のドロップダウンをホバリング、クリックして選択
+            </div>
+            <div class="columns is-mobile top">
+              <div class="column is-6"></div>
+              <div class="column is-5">
+                <div
+                  class="notification has-background-success-warning my-2 py-2"
+                >
+                  <strong>is-hoverable, is-up</strong>
+                </div>
+                <div class="dropdown dd2 is-hoverable is-up">
+                  <!-- <div class="dropdown is-active">  -->
+
+                  <div class="dropdown-trigger">
+                    <button
+                      class="button is-primary"
+                      aria-haspopup="true"
+                      aria-controls="dropdown-menu"
+                    >
+                      <span>Todos2</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="dropdown-menu dd2m" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item" data-item="1">
+                        1.Design a custom database
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="2">
+                        2.Take pictures of flowers
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="3">
+                        3.Ride to a horse and write
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="4">
+                        4.Go for a trip with bike
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="5">
+                        5.Design a custom data
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="6">
+                        6.Buy a sumsung headset
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="7">
+                        7.Listen music for one hour
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="8">
+                        8.Go for a morning walk
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-2"></div>
+            </div>
+
+            <div class="columns is-mobile">
+              <div class="column is-6"></div>
+              <div class="column is-6">
+                <div
+                  class="sel2 notification has-background-warning mr-4 mt-1 py-2"
+                >
+                  表示
+                </div>
+              </div>
+            </div>
+            　
+          </article>
+          <hr />
+
+          <article class="message is-primary">
+            <div class="sel1 notification has-background-primary-light mb-1">
+              右下のドロップダウンをホバリング、クリックして選択
+            </div>
+            <div class="columns is-mobile top">
+              <div class="column is-6"></div>
+              <div class="column is-5">
+                <div
+                  class="notification has-background-success-warning my-2 py-2"
+                >
+                  <strong>is-hoverable, is-up</strong>
+                </div>
+                <div class="dropdown dd2 is-hoverable is-up">
+                  <!-- <div class="dropdown is-active">  -->
+
+                  <div class="dropdown-trigger">
+                    <button
+                      class="button is-primary"
+                      aria-haspopup="true"
+                      aria-controls="dropdown-menu"
+                    >
+                      <span>Todos2</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="dropdown-menu dd2m" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item" data-item="1">
+                        1.Design a custom database
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="2">
+                        2.Take pictures of flowers
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="3">
+                        3.Ride to a horse and write
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="4">
+                        4.Go for a trip with bike
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="5">
+                        5.Design a custom data
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="6">
+                        6.Buy a sumsung headset
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="7">
+                        7.Listen music for one hour
+                      </a>
+
+                      <a href="#" class="dropdown-item" data-item="8">
+                        8.Go for a morning walk
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-2"></div>
+            </div>
+
+            <div class="columns is-mobile">
+              <div class="column is-6"></div>
+              <div class="column is-6">
+                <div
+                  class="sel2 notification has-background-warning mr-4 mt-1 py-2"
+                >
+                  表示
+                </div>
+              </div>
+            </div>
+            　
+          </article>
+
+          <!-- 各ページ終り -->
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $$bulmaMenu('#burger', '#nav-links');
+      $$codeS("#pre1")
+
+      const dd1 = $$q('.dd1');
+      $$ocLm(document.body, { trgt: dd1 }, 'remove');
+      $$ocLm(dd1, { trgt: dd1 }, 'toggle', true);
+
+      $$qAe('.dd1m a', (e) => {
+        e.preventDefault();
+        $$q('.sel1').innerText = e.target.innerText;
+      });
+
+      // $$q('.dd2 a')  is-hoverable
+      $$qAe('.dd2m a', (e) => {
+        e.preventDefault();
+        $$q('.sel2').innerText = e.target.innerText;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!-- https://ja.javascript.info/selection-range -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="/src/js/shortBulma$$.js"></script>
+  </head>
+
+  <body>
+    <p id="p1">Select me: <i>italic</i> and <b>bold</b></p>
+
+    <p>Dummy</p>
+
+    <script>
+      $$oe(p1, () => {
+      // $$qe("#p1", () => {
+      let range = new Range();
+      range.selectNodeContents(p1); // or selectNode(p) で <p> タグも選択します
+
+      document.getSelection().removeAllRanges(); // 存在する選択範囲をクリアします
+      document.getSelection().addRange(range);
+      })
+
+    // 選択するには、最初に既存の選択範囲を削除してください
+    // 選択範囲がすでに存在する場合、removeAllRanges() で最初に空にし、その後 range を追加してください。そうでない場合、Firefox 以外のブラウザは新しい range を無視します。
+
+    // setBaseAndExtent などのいくつかの selection メソッドは例外で、既存の選択範囲を置き換えます。
+
+      // let range = new Range();
+      // range.selectNodeContents(p); // or selectNode(p) で <p> タグも選択します
+
+      // document.getSelection().removeAllRanges(); // 存在する選択範囲をクリアします
+      // document.getSelection().addRange(range);
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+  Selection メソッド
+range の追加/削除をするための Selection メソッド:
+
+    getRangeAt(i) – 0 から始まる i 番目の range を取得します。firefox 以外のブラウザは 0 だけが使用されます。
+    addRange(range) – 選択範囲に range を追加します。すでに range が関連付けられている場合、firefox 以外のブラウザは呼び出しを無視します。
+    removeRange(range) – selection から range を削除します。
+    removeAllRanges() – すべての range を削除します。
+    empty() – removeAllRanges のエイリアスです。
+
+また、Range なしで選択範囲をを直接操作するための便利なメソッドがあります:
+
+  setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset) – 選択範囲の range を、指定された始点 anchorNode/anchorOffset と終点 focusNode/focusOffset に置き換えます。これらの間にあるすべてのコンテンツが選択されます。
+ -->

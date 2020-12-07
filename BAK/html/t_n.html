@@ -1,0 +1,296 @@
+<!-- Helpers$$.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bulma Handlebars" />
+    <title>Bulma Project Handlebars</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <!-- <script src="/src/js/shortBulma$$.js"></script> -->
+    <!-- <script src="/src/js/shortHbs$$.js"></script> -->
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+    <!-- 環境に合わせてください。 -->
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns has-background-white-bis">
+          <div class="column"></div>
+          <div class="column is-10 mt-4">
+            <article class="message is-primary">
+              <div class="message-header subtitle">
+                <p>初めての [<strong>Handlebars</strong>]</p>
+              </div>
+            </article>
+
+            <main>
+              <section class="section">
+                <div class="container">
+                  <div class="notification is-info">
+                    <h1 class="title">Handlebars.registerHelper</h1>
+                    <div class="subtitle">'link' & 'list'</div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div id="target_link"></div>
+                </div>
+              </section>
+
+              <section class="section">
+                <div class="container">
+                  <div id="target"></div>
+                </div>
+              </section>
+              <hr />
+            </main>
+
+            <div class="box">
+              <div class="box">
+                <h2 class="is-size-4 has-background-white-ter p-2 km">　解説</h2>
+                <div class="content">
+                  <ul>
+                    <li>
+                      BulmaでJavascriptを利用するために、このWebサイトでは<br />
+                      　<a href="/src/sub/js/shortBulma.html"
+                        ><strong>shortBulma$$.js</strong> または
+                        <strong>shortBulma.js</strong></a
+                      ><br />
+                      というライブラリを使います。
+                    </li>
+                    <li class="pt-2">
+                      使い方の例：&lt;script
+                      src=&quot;/src/js/shortBulma$$.js&quot;&gt;&lt;/script&gt;<br />
+                      headタグ内に挿入。但し、pathは状況によって変わります。
+                    </li>
+                    <li class="pt-2">
+                      <p class="pt-3 px-3">
+                        例えば、notification$$.htmlとshortBulma$$.jsが同じフォルダにある時は<br />
+                        &lt;script
+                        src=&quot;./shortBulma$$.js&quot;&gt;&lt;/script&gt;
+                        または<br />
+                        &lt;script
+                        src=&quot;shortBulma$$.js&quot;&gt;&lt;/script&gt;
+                        となります。
+                      </p>
+                    </li>
+                    <li>
+                      同じく、handlebars用に<br />
+                      　<a href="/src/sub/js/shortBulma.html"
+                        ><strong>shortHbs$$.js</strong></a
+                      ><br />
+                      というライブラリを使います。
+                    </li>
+                    <hr />
+                    <li class="pt-1">
+                      <dl>
+                        <dt>
+                          <strong
+                            >$$qtFnqT('#template', v, '#target_link');</strong
+                          >
+                        </dt>
+                        <dd class="py-2">
+                          テンプレート#templateをコンパイルし、コンテキストｖを適用して得られたHTMLコードを、要素#contentsのinnserHTMLプロパティに代入する。
+                        </dd>
+                        <dt>
+                          <strong
+                            >$$hFnqT(html, v, '#target');</strong
+                          >
+                        </dt>
+                        <dd class="py-2">
+                          htmlコードをコンパイルし、コンテキストｖを適用して得られたHTMLコードを、要素#targetのinnserHTMLプロパティに代入する。
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/x-handlebars-template" id="template">
+      <div class='notification has-background-warning-light'>
+        <h1 class='title'>
+          テンプレートを利用して、コンパイル！！
+        </h1>
+        <div class='subtitle'>
+          &lt;script type="text/x-handlebars-template" id="template">
+        </div>
+      </div>
+
+      <ul class='panel'>
+        <p class='panel-heading has-background-warning'>
+          <span class='title is-5 has-text-danger-dark'>
+            TREASURES
+          </span>
+          \{{#each}}
+          <span class='subtitle is-5'>
+            (panel)
+          </span>
+        </p>
+        {{#each treasures}}
+          <li class='panel-block has-background-warning-light py-3 mt-1'>
+            <article class='media'>
+              <figure class='media-left'>
+                <div class='image is-64x64'>
+                  <img src='./img/{{img}}' />
+                </div>
+              </figure>
+
+              <div class='media-content'>
+                <div class='content'>
+                  <div>
+                    <strong>
+                      {{name}}
+                    </strong>
+                    <small>
+                      ホームページまたは関連ページ
+                    </small>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam gravida ac felis vitae feugiat. Suspendisse suscipit
+                  vel mi at fermentum. Praesent tincidunt urna non lorem
+                  tristique imperdiet. In maximus lacinia faucibus. Donec a elit
+                  libero.
+                  </p>
+                </div>
+                <div>
+                   >> {{link name url}}
+                </div>
+              </div>
+            </article>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+
+    <script>
+      // 先に定義！
+      Handlebars.registerHelper('link', (text, url) => {
+        return new Handlebars.SafeString(`<a href='${url}'>${text}</a>`);
+      });
+
+      Handlebars.registerHelper('list', (items, options) => {
+        const li = items.map(
+          (item) =>
+            '<li class="panel-block has-background-info-light py-3 mt-1">' +
+            options.fn(item) +
+            '</li>'
+        );
+        return new Handlebars.SafeString(
+          `<ul class='panel'>
+            <p class='panel-heading has-background-danger'>
+              <span class='title is-5 has-text-warning'>
+                TREASURES
+              </span> 
+              <span class='title is-5 has-text-info-light'>
+                \{{#list}}
+              </span>
+              <span class='subtitle is-5 has-text-weight-medium'>
+                (panel)
+              </span>
+            </p>` +
+            li.join('') +
+            '</ul>'
+        );
+      });
+
+      //
+      let html = `
+      <div class='notification is-info'>
+        <small>HTML文字列を利用して<small>
+        <h1 class='title'>
+          
+            listヘルパー関数を定義し、コンパイル
+        </h1>
+        <div class='subtitle'>
+          helper #list: '&lt;li>' + options.fn(item) + '&lt;/li>'
+        </div>
+      </div>
+
+      {{#list treasures}}
+            <article class='media'>
+              <figure class='media-left'>
+                <div class='image is-64x64'>
+                  <img src='./img/{{img}}' />
+                </div>
+              </figure>
+
+              <div class='media-content'>
+                <div class='content'>
+                  <div>
+                    <strong>
+                      {{name}}
+                    </strong>
+                    <small>
+                      ホームページまたは関連ページ
+                    </small>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam gravida ac felis vitae feugiat. Suspendisse suscipit
+                  vel mi at fermentum. Praesent tincidunt urna non lorem
+                  tristique imperdiet. In maximus lacinia faucibus. Donec a elit
+                  libero.
+                  </p>
+                </div>
+                <div>
+                    >> {{link name url}}
+                </div>
+              </div>
+            </article>
+      {{/list}}
+      `;
+
+      let v = {
+        treasures: [
+          {
+            name: 'Javascript',
+            url:
+              'https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript',
+            img: 'Javascript.png',
+          },
+          {
+            name: 'Handlebars',
+            url: 'https://handlebarsjs.com/',
+            img: 'Handlebars42.png',
+          },
+          {
+            name: 'Electron',
+            url: 'https://www.electronjs.org/',
+            img: 'electron2.png',
+          },
+          {
+            name: 'Angular',
+            url: 'https://angular.io/',
+            img: 'Angular400.png',
+          },
+          { name: 'React', url: 'https://ja.reactjs.org/', img: 'React.jpg' },
+        ],
+      };
+
+      $$qtFnqT('#template', v, '#target_link');
+
+      $$hFnqT(html, v, '#target');
+      //
+    </script>
+  </body>
+</html>

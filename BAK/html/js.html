@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Bulma入門 javascript Handlebars Electron Angular notification"
+    />
+
+    <title>Bulma - Javascript</title>
+    <script defer src="js/fontawesome-all.min.js"></script>
+
+    <!-- <script src="./js/shortBulna$$.js"></script> -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/img/favicon-c2.png"
+      sizes="16x16"
+    />
+
+    <script src="/src/js/shortBulma$$.js"></script>
+
+    <style>
+    </style>
+  </head>
+
+  <body class="has-background-success-light">
+    <nav
+      class="navbar is-primary has-text-weight-medium has-shadow"
+      role="navigation"
+      aria-label="Main navigation"
+      id="nav"
+    >
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/index.html" class="navbar-item" title="Top page">BulmaProject</a>
+          <div id="burger" class="navbar-burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="navbar-menu is-primary is-pulled-right mr-2" id="nav-links">
+          <div class="navbar-start navbar-item">
+            <a
+              href="https://bulma.io/documentation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button navbar-item is-primary is-fullwidth mt-1"
+              title="Bulma home!!"
+            >
+              <span class="icon">
+                <img
+                  src="/src/assets/img/bulma32.ico"
+                  alt="bulma"
+                />
+              </span>
+              <span>Bulma</span>
+            </a>
+          </div>
+
+          <div class="navbar-end has-text-dark">
+            <a href="/src/sub/js/js.html" class="navbar-item has-text-right"
+              >Javascript</a
+            >
+            <a href="/src/sub/hbs/hbs.html" class="navbar-item has-text-right"
+              >Handlebars</a
+            >
+            <a href="/src/sub/tron/tron.html" class="navbar-item has-text-right"
+              >Electron</a
+            >
+            <a href="/src/sub/ang/ang.html" class="navbar-item has-text-right"
+              >Angular</a
+            >
+            <a href="/src/sub/react/react.html" class="navbar-item has-text-right"
+              >React</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="notification is-primary is-bold mb-1">
+          <div class="container">
+            <h1 class="title">Bulmaと共に！</h1>
+            <h2 class="subtitle is-5">Javascriptで操作</h2>
+          </div>
+        </div>
+
+        <!-- breadcrumbs -->
+        <div class="section pt-0 pb-0">
+          <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-6 container">
+              <li>
+                <a href="/" class="has-text-grey-light">Top page</a>
+              </li>
+              <li class="is-active"><a href="#">Javascript</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="columns mt-5 mb-0">
+          <div class="column"></div>
+          <div class="column is-8 content">
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="notification$$.html">Notificationを一つずつ削除</a>
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p>
+                  イベントリスナーを設定された削除ボタンを持つ、複数のNotificationを一つずつ削除
+                </p>
+              </div>
+              <blockquote class="py-1 mx-5">
+                主にショートカットを定義したBulma専用の自作ライブラリ<a
+                  href="shortBulma.html"
+                  ><strong>shortBulma$$.js</strong></a
+                >を使って、削除ボタンにイベントリスナーを設定
+              </blockquote>
+            </article>
+
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="dropdown$$.html">Dropdown でメニュー表示</a>
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p></p>
+              </div>
+              <blockquote class="py-1 mx-5">
+                ドロップダウンメニューを表示する2つの例を挙げます。<br>
+                それはクリックとホバリングです。
+              </blockquote>
+            </article>
+
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="form$$.html">簡単なForm のサンプル</a>
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p>送信データの確認</p>
+              </div>
+              <blockquote class="py-1 mx-5">
+                <p><strong>Bulma-Extensions</strong>のチェックボックス・ラジオボタンもあります。</p>
+              </blockquote>
+            </article>
+
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="tabs$$.html"
+                    >Tabsコンポーネントを使って、画面を切り替える</a
+                  >
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p>ボックスTabsメニューの例</p>
+              </div>
+              <blockquote class="py-1 mx-5">Tabsメニューのタブの選択で、画面の切替えを行います。</blockquote>
+            </article>
+
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="toast$$.html"
+                    >Toastメッセージの表示</a
+                  >
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p>短いメッセージを指定箇所にポップ</p>
+              </div>
+              <blockquote class="py-1 mx-5">HTMLによる装飾も行えます。</blockquote>
+            </article>
+
+            <article class="message is-primary pb-1">
+              <div class="message-header">
+                <p>
+                  <a href="quickview$$.html"
+                    >Quickviewで、メッセージ  </a
+                  >
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p>[Bulma-Extensions]</p>
+              </div>
+              <blockquote class="py-1 mx-5">Quickviewを使って右からメッセージを表示</blockquote>
+            </article>
+
+            <article class="message is-info pb-2">
+              <div class="message-header">
+                <p
+                  class="has-text-grey-lighter is-size-7 has-background-danger px-3"
+                >
+                  ライブラリ
+                  <a href="shortBulma.html"
+                    ><strong class="has-text-light is-size-4"
+                      >shortBulma$$.js</strong
+                    >
+                    と
+                    <strong class="has-text-light is-size-4"
+                      >shortBulma.js</strong
+                    ></a
+                  >
+                  について
+                </p>
+              </div>
+              <div class="message-body pb-2">
+                <p></p>
+              </div>
+              <blockquote class="py-1 mx-5"></blockquote>
+            </article>
+          </div>
+          <div class="column"></div>
+        </div>
+
+        <!-- breadcrumbs -->
+        <div class="section pt-0 pb-0">
+          <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-6 container">
+              <li>
+                <a href="/" class="has-text-grey-light">Top page</a>
+              </li>
+              <li class="is-active"><a href="#">Javascript</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      $$bulmaMenu('#burger', '#nav-links');
+    </script>
+  </body>
+</html>

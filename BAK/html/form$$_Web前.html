@@ -1,0 +1,306 @@
+<!-- form$$.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bulma Project</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css"
+    />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+    ></script>
+
+    <script src="/src/js/shortBulma$$.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
+    <!-- /npm/bulma-extensions@6.2.7/bulma-checkradio -->
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column"></div>
+          <div class="column is-8 content">
+            <!-- 各ページ -->
+            <article class="message is-primary">
+              <div class="message-header">
+                <p class="is-size-4 p-4">Form のサンプル</p>
+              </div>
+
+              <div
+                class="message-body has-background-white-bis"
+                style="border-bottom: inset 2px #aaaa88"
+              >
+                <p>
+                  チェックボックス・ラジオボタンには、<strong>Bulma-Extensions</strong>も使っています。
+                </p>
+              </div>
+            </article>
+
+            <div class="box">
+              <div class="notification">
+                DevToolsのconsoleにも出力　[ f12, shift+ctrl+I ]
+              </div>
+
+              <form>
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control has-icons-left">
+                    <input
+                      class="input"
+                      id="name"
+                      type="text"
+                      placeholder="Text input"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input
+                      class="input is-danger"
+                      id="email"
+                      type="email"
+                      placeholder="Email input"
+                      value=""
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Subject</label>
+                  <div class="control">
+                    <div class="select">
+                      <select id="sel">
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea
+                      class="textarea"
+                      id="msg"
+                      placeholder="Textarea"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" id="chk" value="value1" />
+                      I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control" id="rGroup">
+                    <label class="radio">
+                      <input type="radio" name="question" value="rad_value1" />
+                      Yes
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="question" value="rad_value2" />
+                      No
+                    </label>
+                  </div>
+                </div>
+
+                <hr />
+                <p>
+                  ~~~~~ Bulma-Extensions (<strong>bulma-checkradio</strong>)
+                  ~~~~~
+                </p>
+                <div class="field">
+                  <input
+                    type="checkbox"
+                    class="is-checkradio"
+                    id="chkEx"
+                    name="chkEx"
+                    value="value1Ex"
+                  />
+                  <!-- checked="checked" -->
+                  <label for="chkEx"
+                    >I agree to the <a href="#">terms and conditions</a></label
+                  >
+                </div>
+
+                <div class="field" id="rGroupEx">
+                  <input
+                    type="radio"
+                    class="is-checkradio"
+                    id="rd1"
+                    name="question2"
+                    value="rad_value1Ex"
+                  />
+                  <label for="rd1">Yes</label>
+                  <input
+                    type="radio"
+                    class="is-checkradio"
+                    id="rd2"
+                    name="question2"
+                    value="rad_value2Ex"
+                  />
+                  <label for="rd2">No</label>
+                </div>
+
+                <hr />
+
+                <div class="field is-grouped">
+                  <div class="control" id="submit">
+                    <button class="button is-link">Submit</button>
+                  </div>
+                  <div class="control" id="reset">
+                    <button class="button is-link is-light">Reset</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <hr />
+
+            <article class="panel">
+              <p class="panel-heading has-background-info-light mb-1">
+                送信データ　情報
+              </p>
+
+              <div class="data">
+                <!-- <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              bulma
+            </a> -->
+              </div>
+            </article>
+
+            <!-- 各ページ終り -->
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+    <script></script>
+
+    <script>
+      $$de(() => {
+        $$q('#name').focus();
+        $$qe('#name', (e) => console.log(e.target.value), 'change');
+        $$qe('#email', (e) => console.log(e.target.value), 'change');
+        $$qe('#sel', (e) => console.log(e.target.value), 'change');
+        $$qe('#msg', (e) => console.log(e.target.value), 'change');
+
+        $$qe(
+          '#chk',
+          (e) => console.log( `${e.target.value}: ${e.target.checked}` ),
+          'change'
+        );
+
+        $$qAe(
+          '#rGroup input',
+          (e) => {
+            console.log( `${e.target.value}: ${e.target.checked}` );
+          },
+          'change'
+        );
+
+        $$qe(
+          '#chkEx',
+          (e) => console.log( `${e.target.value}: ${e.target.checked}` ),
+          'change'
+        );
+
+        $$qAe(
+          '#rGroupEx input',
+          (e) => {
+            console.log( `${e.target.value}: ${e.target.checked}` );
+          },
+          'change'
+        );
+
+        $$qe('#submit', (e) => {
+          e.preventDefault();
+          console.log(e.target.innerHTML);
+          dispData();
+        });
+        $$qe('#reset', (e) => {
+          // e.preventDefault();
+          e.target.form.reset();
+        });
+      });
+
+      const dispData = () => {
+        let data = '';
+
+        data += mkData('name', '#name');
+        data += mkData('email', '#email');
+        data += mkData('sel', '#sel');
+        data += mkData('msg', '#msg');
+        data += mkData('chk', `${$$Id('#chk').value}: ${$$Id('#chk').checked}`);
+        data += mkData('rGroup', getRadioValue('question'));
+        data += '~~~~~  Extentions  ~~~~~';
+        data += mkData(
+          'chkEx',
+          `${$$Id('#chkEx').value}: ${$$Id('#chkEx').checked}`
+        );
+        data += mkData('rGroupEx', getRadioValue('question2'));
+        $$q('.data').innerHTML = data;
+      };
+
+      const mkData = (hd, sel) => {
+        if (['chk', 'chkEx', 'rGroup', 'rGroupEx'].includes(hd)) {
+          return `
+          <span class="panel-block has-background-white-ter px-4">
+            #${hd}: &nbsp;<strong>${sel}</strong>
+          </span>
+          `;
+        } else {
+          return `
+          <span class="panel-block has-background-white-ter px-4">
+            #${hd}: &nbsp;<strong>${$$q(sel).value}</strong>
+          </span>
+          `;
+        }
+      };
+
+      const getRadioValue = (na) => {
+        let ret = '';
+
+        $$na(na).forEach((elm) => {
+          if (elm.checked) {
+            ret = elm.value;
+          }
+        });
+        return ret;
+      };
+    </script>
+  </body>
+</html>

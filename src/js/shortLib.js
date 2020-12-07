@@ -8,52 +8,24 @@ const $$Id = (ss) => {
   ss = ss.substring(0, 1) === '#' ? ss.substring(1) : ss;
   return document.getElementById(ss);
 };
-
-// selector
-const $$q = (sel) => document.querySelector(sel);
-const $$qAll = (sel) => document.querySelectorAll(sel);
-
-const $$ocL = (o, cN = 'is-active') => o.classList.toggle(cN);
-
-const $$ocLm = (
-  o,
-  { trgt, cN = 'is-active' },
-  mN = 'toggle',
-  stopP = false
-) => {
-  $$oe(o, (e) => {
-    if (stopP) e.stopPropagation();
-    // trgt.classList.toggle(cN);
-    trgt.classList[mN](cN);
-  });
-};
-
-const $$oAcLm = (
-  o,
-  { trgts, cN = 'is-active' }, // trgts: array
-  mN = 'toggle',
-  stopP = false
-) => {
-  $$oe(o, (e) => {
-    if (stopP) e.stopPropagation();
-    // trgt.classList.toggle(cN);
-    trgts.forEach((t) => t.classList[mN](cN));
-  });
-};
+const $$cn = (ss) => document.getElementsByClassName(ss);
+const $$cn1 = (ss) => document.getElementsByClassName(ss)[0];
 
 const $$hbs = (ss, context) => Handlebars.compile(ss)(context);
 const $$hbP = (ssP, context) => Handlebars.templates[ssP](context);
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-const $$cn = (ss) => document.getElementsByClassName(ss);
-const $$cn1 = (ss) => document.getElementsByClassName(ss)[0];
 
 const $$tn = (ss) => document.getElementsByTagName(ss);
 const $$tn1 = (ss) => document.getElementsByTagName(ss)[0];
 
 const $$na = (ss) => document.getElementsByName(ss);
 const $$na1 = (ss) => document.getElementsByName(ss)[0];
+
+// selector
+const $$q = (sel) => document.querySelector(sel);
+const $$qAll = (sel) => document.querySelectorAll(sel);
+
+const $$ocL = (o, ss = 'is-active') => o.classList.toggle(ss);
+
 const $$sBq = (btnId, { target, changeClass }, toggle) =>
   setBtn_q(btnId, { target, changeClass }, toggle);
 
@@ -80,7 +52,7 @@ const $$oes = (o, f) => {
   o.addEventListener('submit', f);
 };
 
-const $$qoe = (ss, f) => {
+const $$qe = (ss, f) => {
   $$q(ss).addEventListener('click', f);
 };
 
@@ -159,13 +131,13 @@ const $$qoeSW = (
 
   switch (toggle) {
     case 'add':
-      $$qoe(btnId, () => trgt.classList.add(changeClass));
+      $$qe(btnId, () => trgt.classList.add(changeClass));
       break;
     case 'remove':
-      $$qoe(btnId, () => trgt.classList.remove(changeClass));
+      $$qe(btnId, () => trgt.classList.remove(changeClass));
       break;
     default:
-      $$qoe(btnId, () => trgt.classList.toggle(changeClass));
+      $$qe(btnId, () => trgt.classList.toggle(changeClass));
       break;
   }
 };

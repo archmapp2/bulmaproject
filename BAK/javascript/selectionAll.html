@@ -1,0 +1,37 @@
+<!-- https://ja.javascript.info/selection-range -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+  </head>
+
+  <body>
+    <p id="p1">Select me: <i>italic</i> and <b>bold</b></p>
+
+    <script>
+      // <p> の 0 番目の子から最後の子までを選択
+      document.getSelection().setBaseAndExtent(p1, 0, p1, p1.childNodes.length);
+      console.log("p1.childNodes.length", p1.childNodes.length)
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+  Selection メソッド
+range の追加/削除をするための Selection メソッド:
+
+    getRangeAt(i) – 0 から始まる i 番目の range を取得します。firefox 以外のブラウザは 0 だけが使用されます。
+    addRange(range) – 選択範囲に range を追加します。すでに range が関連付けられている場合、firefox 以外のブラウザは呼び出しを無視します。
+    removeRange(range) – selection から range を削除します。
+    removeAllRanges() – すべての range を削除します。
+    empty() – removeAllRanges のエイリアスです。
+
+また、Range なしで選択範囲をを直接操作するための便利なメソッドがあります:
+
+  setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset) – 選択範囲の range を、指定された始点 anchorNode/anchorOffset と終点 focusNode/focusOffset に置き換えます。これらの間にあるすべてのコンテンツが選択されます。
+ -->

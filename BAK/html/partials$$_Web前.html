@@ -1,0 +1,125 @@
+<!-- partials$$.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Handlebars</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div id="target_h"></div>
+            <div id="target_n"></div>
+            <div id="target_s"></div>
+          </div>
+
+          <div class="column">
+            <div class="box">
+              <h2 class="has-text-centered is-size-6 py-1">
+                https://unsplash.com/@scottwebb by
+                <span class="has-text-weight-medium">Scott Webb</span>
+              </h2>
+              <img src="/src/assets/img/scott-webb-207709-unsplash.jpg" alt="" />
+              <!-- <img src="../../assets/img/scott-webb-207709-unsplash.jpg" alt="" /> -->
+            </div>
+
+            <div class="panel">
+              <div class="panel-heading">
+                <span class="has-text-warning-dark">出典 <a href="https://medium.com/@jonas_duri/build-a-landing-page-with-webpack-4-6efe83deb7fe">BUILD-A-LANDING-PAGE</a> Jonas Duri</span><br>
+                <span class="has-text-gray-light pt-2"> panel-heading</span>
+                <div class="has-text-primary has-text-centered">each関数 </div>
+              </div>
+              <div id="target_e"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- handlebars header.handlebars -f header.precompiled.js -->
+    <!-- handlebars newsletter.handlebars -f newsletter.precompiled.js -->
+    <!-- handlebars social.handlebars -f social.precompiled.js -->
+
+    <script
+      type="text/javascript"
+      src="./partials/header.precompiled.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./partials/newsletter.precompiled.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./partials/social.precompiled.js"
+    ></script>
+
+    <script type="text/x-handlebars-template" id="template_e">
+      {{#each items}}
+        <p class='panel-block'>
+          {{{item}}}
+        </p>
+      {{/each}}
+    </script>
+
+    <script>
+      const v = {
+        items: [
+          {
+            item: `<span class="has-text-weight-semibold has-text-danger">handlebars-loader</span>の利用
+            `
+          },
+          {
+            item: ` {test: /.handlebars$/, loader: '<span class="has-text-weight-semibold has-text-danger">handlebars-loader</span>'}`,
+          },
+          {
+            item:
+              "<span class='has-text-primary has-text-weight-medium'>~~~ WebPack v4 への対応 ~~~</span>",
+          },
+          {
+            item:
+              "<span class='has-text-primary'>new webpack.LoaderOptionsPlugin</span>({options: ...})",
+          },
+          {
+            item: ' handlebarsLoader: {},',
+          },
+          {
+            item:
+              "<span class='has-text-primary'>new HtmlWebpackPlugin</span>({...}),",
+          },
+          {
+            item: " templateParameters: require('../src/partials/data.json'),",
+          },
+        ],
+      };
+
+      $$d_qPreT('header', v, '#target_h');
+      $$d_qPreT('newsletter', v, '#target_n');
+      $$d_qPreT('social', v, '#target_s');
+
+      $$qtFnqT('#template_e', v, '#target_e');
+
+      $$de(() => $$bulmaTabs('.tabsX li', '#tab-content > div'));
+    </script>
+
+  </body>
+</html>
+

@@ -1,0 +1,34 @@
+<!-- https://ja.javascript.info/selection-range -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="p">Select me: <i>italic</i> and <b>bold</b></p>
+
+    Cloned: <span id="cloned"></span>
+    <br />
+    As text: <span id="astext"></span>
+
+    <script>
+      document.onselectionchange = function () {
+        let selection = document.getSelection();
+
+        cloned.innerHTML = astext.innerHTML = '';
+
+        // range から DOM ノードをクローンします(ここでは multiselect をサポートしています)
+        for (let i = 0; i < selection.rangeCount; i++) {
+          cloned.append(selection.getRangeAt(i).cloneContents());
+        }
+
+        // テキストとして取得
+        astext.innerHTML += selection;
+      };
+    </script>
+  </body>
+</html>
