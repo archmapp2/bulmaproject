@@ -8,6 +8,11 @@
       content="Bulma入門 javascript Handlebars Electron Angular React"
     />
     <title>Bulma Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+
     <!-- <link rel="stylesheet" href="css/bulma0.css" /> -->
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
 
@@ -123,6 +128,31 @@
         <div class="columns">
           <div class="column"></div>
           <div class="column is-size-6 is-8 content">
+            <article class="message is-primary">
+              <div class="message-header subtitle">
+                <p>Bulmaを使おう</p>
+              </div>
+
+              <div class="notification has-background-primary-light py-1">
+                <h3 class="subtitle is-size-5">
+                  <div class="has-text-centered"><p>公開日：2020/12/15</p></div>
+                </h3>
+                <div class="subtitle has-text-centered">
+                  完了日：2021/04/30
+                </div>
+              </div>
+
+              <div
+                class="message-body has-background-grey-lighter"
+                style="border-bottom: inset 2px #aaaa88"
+              >
+                <p>
+                  初回は、
+                  <strong>Javascript</strong> と <strong>Handlebars</strong> までです。
+                </p>
+              </div>
+            </article>
+
             <div class="box">
               <h2 class="title has-background-white-ter km">
                 <button
@@ -162,7 +192,7 @@
                     <img
                       src="./assets/img/handlebars42.png"
                       alt="bulma" /></span
-                  >&nbsp;&nbsp;&nbsp;handlebarsでは
+                  >&nbsp;&nbsp;&nbsp;Handlebarsでは
                 </button>
               </h2>
               <p class="is-size-7 is-size-6-tablet has-text-grey-darker lh7">
@@ -276,76 +306,6 @@
           </nav>
         </div>
 
-        <i class="fab fa-snapchat-ghost"></i>
-        <br />
-        <span class="has-text-info ml-6">
-          <figure>
-            <i class="fas fa-3x fa-mug-hot"></i>
-            <i class="fas fa-3x fa-bicycle"></i>
-            <i class="fas fa-3x fa-broom"></i>
-            <i class="fas fa-3x fa-dragon"></i>
-            <i class="fas fa-3x fa-globe"></i>
-            <i class="fab fa-3x fa-snapchat-ghost"></i>
-            <i class="fab fa-3x fa-mixcloud"></i>
-          </figure>
-        </span>
-        <br />
-        <span class="has-text-info ml-6">
-          fa-fw
-          <figure>
-            <i class="fas fa-fw fa-3x fa-mug-hot"></i>
-            <i
-              class="fas fa-2x fa-mug-hot chestnut-light"
-              aria-hidden="true"
-            ></i>
-            <i class="fas fa-fw fa-3x fa-bicycle"></i>
-            <i class="fas fa-fw fa-3x fa-broom"></i>
-            <i class="fas fa-fw fa-3x fa-dragon"></i>
-            <i class="fas fa-fw fa-3x fa-globe"></i>
-            <i class="fab fa-fw fa-3x fa-snapchat-ghost"></i>
-            <i class="fab fa-fw fa-3x fa-mixcloud"></i>
-          </figure>
-        </span>
-        <br />
-        <span class="has-text-info ml-6">
-          fa-fw
-          <figure>
-            <i class="fas fa-fw fa-3x fa-mug-hot chestnut-light"></i>
-            <i class="fas fa-fw fa-2x fa-mug-hot chestnut-light"></i>
-            <i class="fas fa-fw fa-x fa-mug-hot chestnut-light"></i>
-            <i class="fas fa-fw fa-3x fa-mug-hot"></i>
-            <i class="fas fa-fw fa-2x fa-mug-hot"></i>
-            <i class="fas fa-fw fa-x fa-mug-hot"></i>
-            <i class="fas fa-fw fa-3x fa-bicycle"></i>
-            <i class="fas fa-fw fa-3x fa-broom"></i>
-            <i class="fas fa-fw fa-3x fa-dragon"></i>
-            <i class="fas fa-fw fa-3x fa-globe"></i>
-            <!-- <i class="fab fa-fw fa-3x fa-angular"></i> -->
-            <span class="has-text-danger">
-              <i class="fab fa-fw fa-3x fa-angular"></i>
-            </span>
-            <span class="has-text-danger">
-              <i class="fab fa-fw fa-2x fa-angular"></i>
-            </span>
-            <span class="has-text-danger is-small">
-              <i class="fab fa-fw fa-2x fa-angular"></i>
-            </span>
-
-            <span class="icon is-small">
-              <i class="fab fa-fw fa-2x fa-react"></i>
-            </span>
-
-            <span>Left</span>
-            <i class="fab fa-fw fa-3x fa-react"></i>
-            <i class="fab fa-fw fa-2x fa-react"></i>
-            <span class="has-text-warning">
-              <i class="fab fa-fw fa-3x fa-js"></i>
-            </span>
-            <span class="has-text-warning">
-              <i class="fab fa-fw fa-2x fa-js"></i>
-            </span>
-          </figure>
-        </span>
       </div>
     </section>
 
@@ -357,33 +317,12 @@
             <ul>
               <li>
                 <i class="fas fa-fw fa-x fa-mug-hot chestnut-light"></i>
-                <a href="/src/sub/info/info$$.html">参考資料</a>
+                <a href="/src/sub/info/info$$.html"><span class="is-size-5">参考資料</span></a>
               </li>
               <!-- <li><a href="#0">Frequently Asked Questions</a></li> -->
             </ul>
           </div>
-          <!-- <div class="column is-half-mobile is-one-quarter-desktop">
-            <h6 class="title is-5">Follow us</h6>
-            <ul>
-              <li>
-                <a href="#0"><i class="fab fa-fw fa-facebook"></i> Facebook</a>
-              </li>
-              <li>
-                <a href="#0"
-                  ><i class="fab fa-fw fa-instagram"></i> Instagram</a
-                >
-              </li>
-              <li>
-                <a href="#0"><i class="fab fa-fw fa-twitter"></i> Twitter</a>
-              </li>
-              <li>
-                <a href="#0"><i class="fab fa-fw fa-youtube"></i> YouTube</a>
-              </li>
-              <li>
-                <a href="#0"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a>
-              </li>
-            </ul>
-          </div> -->
+          <div class="column"></div>
           <div class="column is-half-mobile is-one-quarter-desktop">
             <h6 class="title is-5">提供:</h6>
             <address>
