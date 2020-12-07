@@ -12,7 +12,7 @@ module.exports = merge(common, {
   devtool: 'source-map',
   output: {
     filename: '[name].[contentHash].bundle.js',
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
     minimizer: [
@@ -37,7 +37,7 @@ module.exports = merge(common, {
     // "clean-webpack-plugin": "^3.0.0"
     // new CleanWebpackPlugin({
     //   dry: true,
-    //   cleanAfterEveryBuildPatterns: ['docs'],
+    //   cleanAfterEveryBuildPatterns: ['dist'],
     // }),
     // new HtmlWebpackPlugin({
     //   filename: 'index.html',
