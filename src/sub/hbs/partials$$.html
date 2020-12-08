@@ -16,12 +16,17 @@
       src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
     ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <!-- <script src="../../js/handlebars.min-v4.7.6.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@v4.7.6/dist/handlebars.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script> -->
+    <!-- <script src="example.precompiled.js"></script> -->
 
     <link
       rel="icon"
       type="image/png"
-      href="../../assets/img/favicon-c2.png"
+      href="/src/assets/img/favicon-c2.png"
       sizes="16x16"
     />
 
@@ -61,7 +66,7 @@
             >
               <!-- ファビコンは、distフォルダをルートにした時現れる！ -->
               <span class="icon">
-                <img src="../../assets/img/bulma32.ico" alt="bulma" />
+                <img src="/src/assets/img/bulma32.ico" alt="bulma" />
               </span>
               <span>Bulma</span>
             </a>
@@ -166,7 +171,7 @@
                           src="/src/assets/img/scott-webb-207709-unsplash.jpg"
                           alt=""
                         />
-                        <!-- <img src="../../assets/img/scott-webb-207709-unsplash.jpg" alt="" /> -->
+                        <!-- <img src="/src/assets/img/scott-webb-207709-unsplash.jpg" alt="" /> -->
                       </div>
 
                       <div class="panel">
@@ -369,26 +374,33 @@
                     <li class="pt-1">
                       <dl>
                         <dt>
-                          <strong
-                            >$$d_qPreT('header', v, '#target_h')</strong
-                          >
+                          <strong>$$d_qPreT('header', v, '#target_h')</strong>
                         </dt>
                         <dd class="py-2">
                           プリコンパイルした'header'を読込み、要素'#target_h'にセットします。ここでは値vは、dummyです。
                         </dd>
                         <dt>
-                          <strong>$$qtFnqT('#template_e', v, '#target_e')</strong>
+                          <strong
+                            >$$qtFnqT('#template_e', v, '#target_e')</strong
+                          >
                         </dt>
                         <dd class="py-2">
                           テンプレート#template_eをコンパイルし、コンテキストｖを適用して得られたHTMLコードを、要素#target_eのinnserHTMLプロパティに代入する。
                         </dd>
                         <dt>
-                          <strong>$$bulmaTabs('.tabsX li', '#tab-content > div')</strong>
+                          <strong
+                            >$$bulmaTabs('.tabsX li', '#tab-content >
+                            div')</strong
+                          >
                         </dt>
                         <dd>
                           関数$$bulmaTabsは、各タブ項目と各画面を指定するセレクタ文字列を引数に取り、タブ機能を実現しています
                         </dd>
-                        <dt><strong>$$de = (f) => { ...'DOMContentLoaded', f)</strong></dt>
+                        <dt>
+                          <strong
+                            >$$de = (f) => { ...'DOMContentLoaded', f)</strong
+                          >
+                        </dt>
                         <dd class="py-2">ロード時にイベントリスナーfを設定</dd>
                       </dl>
                     </li>

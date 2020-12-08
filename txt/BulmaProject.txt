@@ -15,3 +15,16 @@ https://jenil.github.io/bulmaswatch/
 
 
 archmapp77@gmail.com
+
+github
+  archmapp@i.softbank.jp
+  dist ===> docs
+
+  [Settings]
+    GitHub Pages
+    Source: None => master [save]
+      Branch master /docs
+
+    https://archmapp2.github.io/bulmaproject/
+
+    ***  For root URLs (like http://example.com/) you must provide an index.html file.

@@ -40,7 +40,7 @@ module.exports = {
 
   devServer: {
     // writeToDisk: true,
-    host: '0.0.0.0',
+    // host: '0.0.0.0',
   },
 
   module: {

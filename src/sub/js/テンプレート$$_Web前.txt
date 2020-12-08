@@ -65,10 +65,10 @@ tabs$$_Web前.htmlの作成
 
 ・　tabs$$.htmlの動きを確認。ユーザーはコードをコピペするので、こちらでも次の手順で確認してみる。
 
-・　<script src="/src/js/shortBulma$$.js"></script>を調節後、[t.html]等を｛ブラウザで開くで確認｝チェック
+・　<script src="./src/js/shortBulma$$.js"></script>を調節後、[t.html]等を｛ブラウザで開くで確認｝チェック
 
 *** 重要
-    <script src="/src/js/shortBulma$$.js"></script>のままで確認するには、
+    <script src="./src/js/shortBulma$$.js"></script>のままで確認するには、
     webpack-dev-serverを利用！
 
 
