@@ -10,7 +10,7 @@
     "watch": "webpack --config webpack.dev.js --watch",
     "build": "webpack --config webpack.prod.js && npm run cpImg && npm run cpB && npm run cpP",
     "cpImg": "copy src\\assets\\img\\*.* docs\\src\\assets\\img",
-    "cpB": "md docs\\src\\js 2> nul && copy src\\js\\short*$$.js docs\\src\\js",
+    "cpB": "md docs\\src\\js 2> nul && copy src\\js\\short*$$.js docs\\src\\js && copy src\\js\\bulma-toast.min.js docs\\src\\js",
     "cpP": "md docs\\src\\sub\\hbs\\partials 2> nul && copy src\\sub\\hbs\\partials\\*.js docs\\src\\sub\\hbs\\partials",
     "cpBB": "npm run cpB",
     "rmB": "rmdir /S /Q  docs"
