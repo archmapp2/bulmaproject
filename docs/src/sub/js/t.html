@@ -1,4 +1,36 @@
-<!doctype html><html><head><title>Hello Handlebars</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css"/><script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script><script src="../../js/shortBulma$$.js"></script><script src="../../js/shortHbs$$.js"></script><link href="../../../main.ef0929a6150b0869673d.css" rel="stylesheet"></head><body><section class="section"><div class="container"><div id="target"></div></div></section><script id="template" type="text/x-handlebars-template"><div>
+<!--https://subscription.packtpub.com/book/web_development/9781783282654/1/ch01lvl1sec06/top-6-features-you-need-to-know-about -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Handlebars</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css"
+    />
+
+    <!-- <script src="./js/handlebars.min-v4.7.6.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="../../js/shortBulma$$.js"></script>
+    <script src="../../js/shortHbs$$.js"></script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div id="target"></div>
+      </div>
+    </section>
+
+    <script id="template" type="text/x-handlebars-template">
+      <div>
         <article class="message has-background-success-light">
           <div class="message-header has-background-warning">
             <p>ヘルパー関数</p>
@@ -36,7 +68,11 @@
       <div>
         <h2 class="notification is-success subtitle">Tag Version</h2>
         {{formIt user}}
-      </div></script><script>Handlebars.registerHelper('formIt', function (data, options) {
+      </div>
+    </script>
+
+    <script>
+      Handlebars.registerHelper('formIt', function (data, options) {
         let fields = {};
         //Generate the Inputs
         for (let k in data) {
@@ -103,4 +139,7 @@
         newsletter: true,
       };
 
-      $$qtFnqT('#template', { user: userData }, '#target');</script><script src="../../../main.6af79e4ef33048338434.bundle.js"></script><script src="../../../vendor.23e019281b5239926c72.bundle.js"></script></body></html>
+      $$qtFnqT('#template', { user: userData }, '#target');
+    </script>
+  </body>
+</html>
