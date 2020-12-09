@@ -197,7 +197,7 @@
 
           const img = document.createElement(&#039;img&#039;);
           img.src = `./img/${imgUrl}`;
-          // img.src = `/src/assets/img/${imgUrl}`;
+          // img.src = `../../assets/img/${imgUrl}`;
           icon.appendChild(img);
 
           const info = document.createElement(&#039;span&#039;);
@@ -291,7 +291,7 @@
 
           const img = document.createElement('img');
           // img.src = `./img/${imgUrl}`;
-          img.src = `/src/assets/img/${imgUrl}`;
+          img.src = `../../assets/img/${imgUrl}`;
           icon.appendChild(img);
 
           const info = document.createElement('span');
@@ -318,17 +318,43 @@
           wrapper.appendChild(info);
 
           // Apply external styles to the shadow dom
-          const linkElem = document.createElement('link');
-          linkElem.setAttribute('rel', 'stylesheet');
-          linkElem.setAttribute('type', 'text/css');
-          // linkElem.setAttribute('href', './style_link.css');
-          linkElem.setAttribute('href', '../../sub/hbs/style_link.css');
+          const styleElem = document.createElement('style');
+          styleElem.innerHTML = `
+          <style>
+            .wrapper {
+              position: relative;
+            }
 
+            .info {
+              font-size: 0.8rem;
+              width: 200px;
+              display: inline-block;
+              border: 1px solid black;
+              padding: 10px;
+              border-radius: 10px;
+              opacity: 0.8;
+              transition: 0.6s all;
+              position: absolute;
+              bottom: 20px;
+              left: 10px;
+              z-index: 3;
+            }
+
+            img {
+              width: 1.2rem;
+            }
+
+            .icon:hover + .info,
+            .icon:focus + .info {
+              opacity: 0.9;
+            }
+          </style>
+          `;
           // Attach the created elements to the shadow dom
-          shadow.appendChild(linkElem);
+          shadow.appendChild(styleElem);
           shadow.appendChild(wrapper);
         }
       }
 
       // Define the new element
-      customElements.define('popup-info', PopUpInfo);</script><script src="../../../main.cc00427d40cb6721ae4b.bundle.js"></script><script src="../../../vendor.d05f9b68c17becefb377.bundle.js"></script></body></html>
+      customElements.define('popup-info', PopUpInfo);</script><script src="../../../main.6af79e4ef33048338434.bundle.js"></script><script src="../../../vendor.23e019281b5239926c72.bundle.js"></script></body></html>

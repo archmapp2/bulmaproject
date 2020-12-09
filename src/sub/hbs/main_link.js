@@ -24,7 +24,7 @@ class PopUpInfo extends HTMLElement {
 
     const img = document.createElement('img');
     img.src = `./img/${imgUrl}`;
-    // img.src = `/src/assets/img/${imgUrl}`;
+    // img.src = `../../assets/img/${imgUrl}`;
     icon.appendChild(img);
 
     const info = document.createElement('span');
