@@ -13,6 +13,7 @@
     "cpB": "md docs\\src\\js 2> nul && copy src\\js\\short*$$.js docs\\src\\js && copy src\\js\\bulma-toast.min.js docs\\src\\js",
     "cpP": "md docs\\src\\sub\\hbs\\partials 2> nul && copy src\\sub\\hbs\\partials\\*.js docs\\src\\sub\\hbs\\partials",
     "cpBB": "npm run cpB",
+    "cpX": "xcopy /siYQ .\\src\\sub\\*.* .\\docs\\src\\sub",
     "rmB": "rmdir /S /Q  docs"
   },
   "keywords": [],
