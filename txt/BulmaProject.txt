@@ -28,3 +28,7 @@ github
     https://archmapp2.github.io/bulmaproject/
 
     ***  For root URLs (like http://example.com/) you must provide an index.html file.
+
+
+xcopy /siYQ .\src\sub\*.* .\docs\src\sub
+
